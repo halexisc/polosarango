@@ -7,7 +7,7 @@ const Navbar = () => {
         
 <ul className="nav">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Polos Arango</a>
+    <a class="nav-link active" aria-current="page" href="#">Polos Arango.</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Inicio</a>
