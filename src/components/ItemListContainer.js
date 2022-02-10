@@ -32,7 +32,7 @@ export default function ItemListContainer() {
       />
       {loading ? (
         <h1 style={{ height: "100vh", width: "100%", fontSize: "5em" }}>
-          Loading....
+          Un momento cargamos los productos en breve
         </h1>
       ) : (
         <ItemList lista={items} />
