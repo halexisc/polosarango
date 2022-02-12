@@ -15,7 +15,7 @@ export default function ItemList({ lista }) {
             id={item.id}
             name={item.title}
             descript={item.price}
-            view={item.pictuteurl}
+            view={item.pictureurl}
        
           />
 
