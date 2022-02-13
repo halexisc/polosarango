@@ -14,13 +14,12 @@ export default function ItemList({ lista }) {
           <Item
             key={index}
             id={item.id}
-            name={item.title}
-            descript={item.price}
-            view={item.pictureurl}
+            title={item.title}
+            price={item.price}
+            pictureurl={item.pictureurl}
        
           />
-
-          <CustomInput onChange={getData} valor={moneda}  />
+          
         </>
       ))
     

@@ -8,20 +8,20 @@ export const list = [{
     pictureurl: "https://static.dafiti.com.co/p/hamer-7171-789348-1-zoom.jpg"
 
 },{
-    id: "01",
-    title: "polo oreo",
+    id: "02",
+    title: "polo azul",
     price: 50,
     pictureurl: "https://static.dafiti.com.co/p/hamer-7171-789348-1-zoom.jpg"
 
 },{
-    id: "01",
-    title: "polo deportiva",
+    id: "03",
+    title: "polo blanca",
     price: 50,
     pictureurl: "https://static.dafiti.com.co/p/hamer-7171-789348-1-zoom.jpg"
 
 },{
-    id: "01",
-    title: "polo campeón",
+    id: "04",
+    title: "polo verde",
     price: 50,
     pictureurl: "https://static.dafiti.com.co/p/hamer-7171-789348-1-zoom.jpg"
 

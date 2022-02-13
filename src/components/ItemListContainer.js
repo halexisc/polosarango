@@ -25,15 +25,26 @@ export default function ItemListContainer() {
   }, []);
 
   return (
-    <div>
+
+
+    
+    <div >
           
-     
-      {loading ? (
-        <h1 style={{ height: "100vh", width: "100%", fontSize: "2em" }}>
-          Un momento cargamos los productos en breve
-        </h1>
+         {items.length > 0 ? (
+
+           items.map((item, index) => (
+                <Item
+                key={index}
+                id={item.id}
+                title={item.title}
+                price={item.price}
+                pictureurl={item.pictureurl}
+                />
+           ))
+
+          
       ) : (
-              <ItemList lista={items} />
+             <spam>En breve apareceran las polos</spam>
       )}
     </div>
   );
