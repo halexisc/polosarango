@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import customFetch  from "../utils/customFetch";
 import ItemDetail from "./ItemDetail";
 const { bd } = require('../bd');
@@ -18,3 +18,4 @@ useEffect(() => {
     }
 
     export default ItemListContainer;
+*/

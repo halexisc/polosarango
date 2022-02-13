@@ -1,3 +1,6 @@
+import React from "react"
+
+
 export default function Item({id, title, price, pictureurl}){
     return(
         <article>

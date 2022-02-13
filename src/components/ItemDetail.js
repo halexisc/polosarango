@@ -1,4 +1,4 @@
-function ItemDetail ({item}){
+/*function ItemDetail ({item}){
     return <>
     
     
@@ -8,3 +8,4 @@ function ItemDetail ({item}){
 }
 
 export default ItemDetail;
+*/
