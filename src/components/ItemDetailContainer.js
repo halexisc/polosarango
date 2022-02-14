@@ -1,21 +1,51 @@
-/*import { useEffect, useState } from "react";
-import customFetch  from "../utils/customFetch";
-import ItemDetail from "./ItemDetail";
-const { bd } = require('../bd');
+import { useEffect, useState } from "react";
+import Item from "./Item";
+import ItemDetail from "./ItemDetail"; 
+import { list, getList } from "../bd";
 
-const ItemListContainer = () => {
 
-const[dato, setDato] = useState({});
-
-useEffect(() => {
-    customFetch(2000, bd[2])
-    .them(result => setDato(result))
-    .catch(err => console.log(err))
-    }, []);
-    return (
-        <ItemDetail item={dato}/>
-    );
+export default function ItemDetailContainer() {
+  const [items, setItems] = useState([]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(true);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    setLoading(true);
+    // getList(list, 5000)
+    //   .then((res) => setItems(res))
+    //   .catch((e) => console.log(e));
+    try {
+      const data = await getList(list, 2000);
+      console.log(data);
+      setItems(data);
+      setLoading(false);
+    } catch (e) {
+      
     }
+  }, []);
 
-    export default ItemListContainer;
-*/
+  return (
+
+
+    
+    <div >
+          
+         {items.length > 0 ? (
+
+           items.map((item, index) => (
+                <Item
+                key={index}
+                id={item.id}
+                title={item.title}
+                price={item.price}
+                pictureurl={item.pictureurl}
+                />
+           ))
+
+          
+      ) : (
+             <spam>En breve apareceran las polos</spam>
+      )}
+    </div>
+  );
+}

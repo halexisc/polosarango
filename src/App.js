@@ -12,7 +12,7 @@ function App() {
     <>
     <Navbar />
    
-    <ItemListContainer      />
+  {<ItemListContainer      />}
     {/*<ItemDetailContainer />*/}
       <h1>Hola coder</h1>
      
