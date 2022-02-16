@@ -1,21 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import * as bootstrap from 'bootstrap';
 import CartWidget from './CartWidget'; 
 
 const Navbar = () => {
     return (
           
       <ul className="nav">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Polos Arango.</a>
+      <li className="nav-item">
+        <a className="nav-link active" aria-current="page" href="#">Polos Arango.</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Inicio</a>
+      <li className="nav-item">
+        <a className="nav-link" href="#">Inicio</a>
       </li>
-      <li class="nav-item">
+      <li className="nav-item">
         <a class="nav-link" href="#">Nosotros</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Catáctanos</a>
+      <li className="nav-item">
+        <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Catáctanos</a>
       </li>
          <CartWidget/>
                  

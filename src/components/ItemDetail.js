@@ -1,9 +1,10 @@
+import Item from './Item'; //faltaba importar Item
 
-function ItemDetail ({item}){
+function ItemDetail ({item, key}){ //faltaba key 
     return <>
     
      <Item
-            key={index}
+            key={key}
             id={item.id}
             title={item.title}
             price={item.price}

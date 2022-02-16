@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Item({id, title, price, pictureurl}){
     return(
-
+<>
        
 
-        <article>
+      <article>
               <span>{id}</span>
               <span>{title}</span>
               <span>{price}</span>
@@ -15,8 +15,8 @@ export default function Item({id, title, price, pictureurl}){
                     <img src={pictureurl} alt={id} /> 
                 </figure>
 
-       </article>   
-   
+       </article> 
+   </>
     
     )
 }

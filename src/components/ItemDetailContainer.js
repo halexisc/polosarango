@@ -44,7 +44,7 @@ export default function ItemDetailContainer() {
 
           
       ) : (
-             <spam>En breve apareceran las polos</spam>
+             <span>En breve apareceran las polos</span> //estaba escrito como spam
       )}
     </div>
   );

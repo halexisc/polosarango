@@ -44,8 +44,9 @@ export default function ItemListContainer() {
 
           
       ) : (
-             <spam>En breve apareceran las polos</spam>
+             <span>En breve apareceran las polos</span> //estaba escrito como span
       )}
     </div>
   );
 }
+
