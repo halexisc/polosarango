@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrap from 'bootstrap';
 import CartWidget from './CartWidget'; 
 import { Link } from 'react-router-dom'
+import SearchForm from './SearchForm';
 
 
 
@@ -9,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
           
-      <ul className="nav">
+      <ul className="nav" onClick={() => alert('Hola navbar')}>
       <li className="nav-item">
           <Link to='/' ><a className="nav-link active" aria-current="page" href="#">Polos Arango.</a></Link>
       </li>
@@ -26,7 +27,8 @@ const Navbar = () => {
         <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Catáctanos</a>
       </li>
          <CartWidget/>
-                 
+     <SearchForm  />       
+
 
 
     </ul>

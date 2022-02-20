@@ -1,5 +1,6 @@
 import Item from './Item'; //faltaba importar Item
 
+
 function ItemDetail ({item, key}){ //faltaba key 
     return <>
     
