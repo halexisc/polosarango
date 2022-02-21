@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrap from 'bootstrap';
 import CartWidget from './CartWidget'; 
 import { Link } from 'react-router-dom'
-import SearchForm from './SearchForm';
 
 
 
@@ -27,7 +26,7 @@ const Navbar = () => {
         <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Catáctanos</a>
       </li>
          <CartWidget/>
-     <SearchForm  />       
+         
 
 
 
