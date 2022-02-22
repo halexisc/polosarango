@@ -1,3 +1,4 @@
+
 //import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -10,6 +11,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 
 
+
 function App() {
   return (<>
     <BrowserRouter>
@@ -19,7 +21,7 @@ function App() {
       <Route path="/category/:idCtegory" element={<ItemListContainer />} />
       <Route path="/item/:idItem" element={<ItemDetailContainer />} />
 
-   
+
      
     </Routes>
     

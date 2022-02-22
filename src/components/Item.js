@@ -5,16 +5,13 @@ import '../components/estylo.css'
 
 
 
-
-
 export default function Item({id, title, price, pictureurl}){
     return(
 <>
 
       <div className="card" styleName="width: 18rem;" >
-               <figure>
-      
-                    <img className="card-img-top"  src={pictureurl}  /> 
+               <figure>      
+                    <img className="card-img-top"  src={pictureurl} /> 
                </figure>
         
                   <div className="card-body">
@@ -23,6 +20,7 @@ export default function Item({id, title, price, pictureurl}){
                       <h5 className="card-title">Cod: {id}</h5>
                       
                          <a href="/Item/${id}" className="btn btn-primary"> Detalles </a>
+                        
                  </div>
        </div> 
      
