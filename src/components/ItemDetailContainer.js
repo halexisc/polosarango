@@ -1,10 +1,42 @@
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 import Item from "./Item";
+import { useParams } from 'react-rauter-dom'
 import ItemDetail from "./ItemDetail"; 
 import { list, getList } from "../bd";
+import bd from '../bd'
 
 
-export default function ItemDetailContainer() {
+const ItemDetailContainer = () => {
+
+const [items, setItems] = useState({});
+const { id } = useParams(); 
+
+
+useEffect (() => {
+
+const fountItem = bd.filter((element) => element.id.toString() === id);
+setItems(fountItem.length > 0 ? fountItem[0] : { name : 'not fount'});
+}, [id]);
+
+return (
+
+  <>
+  <section className='text-gray-700 body-font overflow-hidden bg-white'>
+        <div className='container px-5 py-24 mx-auto'>
+          <ItemDetail bd={Item} />
+        </div>
+      </section>
+  </>
+
+);
+
+};
+
+export default ItemDetailContainer
+
+
+
+/*export default function ItemDetailContainer() {
   const [items, setItems] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(true);
@@ -44,8 +76,10 @@ export default function ItemDetailContainer() {
 
           
       ) : (
-             <span>En breve apareceran las polos</span> //estaba escrito como spam
+             <span>En breve apareceran las detalles</span> //estaba escrito como spam
       )}
     </div>
   );
 }
+
+*/
