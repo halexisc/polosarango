@@ -1,20 +1,20 @@
 import { React, useEffect, useState } from "react";
 import Item from "./Item";
-import { useParams } from 'react-rauter-dom'
+import { useParams } from 'react-router-dom'
 import ItemDetail from "./ItemDetail"; 
 import { list, getList } from "../bd";
-import bd from '../bd'
+//import list from '../bd'
 
 
 const ItemDetailContainer = () => {
 
-const [items, setItems] = useState({});
+const [item, setItems] = useState({});
 const { id } = useParams(); 
 
 
 useEffect (() => {
 
-const fountItem = bd.filter((element) => element.id.toString() === id);
+const fountItem = list.filter((element) => element.id.toString() === id);
 setItems(fountItem.length > 0 ? fountItem[0] : { name : 'not fount'});
 }, [id]);
 
@@ -23,7 +23,7 @@ return (
   <>
   <section className='text-gray-700 body-font overflow-hidden bg-white'>
         <div className='container px-5 py-24 mx-auto'>
-          <ItemDetail bd={Item} />
+          <ItemDetail bd={item} />
         </div>
       </section>
   </>
