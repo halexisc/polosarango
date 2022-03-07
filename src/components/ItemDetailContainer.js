@@ -3,13 +3,26 @@ import Item from "./Item";
 import { useParams } from 'react-router-dom'
 import ItemDetail from "./ItemDetail"; 
 import { list, getList } from "../bd";
+import { collection, getDocs } from "firebase/firestore";
 //import list from '../bd'
-
+import db from '../utils/firebaseConfig'
 
 const ItemDetailContainer = () => {
 
 const [item, setItems] = useState({});
 const { id } = useParams(); 
+
+
+useEffect(() => {
+ const firestoreFetch = async () => {
+ const querySnapshot = await getDocs(collection(db, "products"));
+ querySnapshot.forEach((doc) => {
+   console.log('${doc.id} => ${doc.data()}');
+ });
+}
+firestoreFetch();
+}, [item]);
+
 
 
 useEffect (() => {
